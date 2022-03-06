@@ -11,12 +11,14 @@ class Grade:
         df = pd.DataFrame.from_dict(grade_curricular, orient='index')
 
     def mostrar_materias(self):#mostra todas as matérias do curriculo
+        print('\nCurrículo de matérias do curso: Tecnologia em Sistemas de Computação da Universidade Federal Fluminense(UFF) ')
         print(df)
     def materias_periodo(self,periodo):#mostra matérias do período selecionado
         result_df = df.loc[df['periodo']== periodo]
+        print(f'\nMaterias do {periodo}° periodo:')
         print(result_df)
 
 
-#p1 = Grade(1)
-#p1.mostrar_materias()
-#p1.materias_periodo(5)
+p1 = Grade(1)
+p1.mostrar_materias()
+p1.materias_periodo(1)
