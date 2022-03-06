@@ -8,5 +8,9 @@ Fiz para me auxiliar na organização dos meus estudos, meu foco é que o progra
 
 3- Mostrar desciplinas por periodo :heavy_check_mark:
 
+4- Mostrar o cronograma detalhado das matérias do período selecionado
+
+5- Mostrar o conteúdo de cada semana da matéria escolhida
+
 
 Conforme o projeto for avançado, este readme será atualizado :purple_heart:
