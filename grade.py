@@ -19,6 +19,6 @@ class Grade:
         print(result_df)
 
 
-p1 = Grade(1)
-p1.mostrar_materias()
-p1.materias_periodo(1)
+class Disciplina:
+    def __init__(self):
+        pass
