@@ -26,4 +26,4 @@ grade_curricular = {
     'Redes de Computadores II':{'periodo':6,'sigla':'RC2','horas':120,'requisito':'RC1'},
     'Arquitetura e Projeto de Sistemas':{'periodo':6,'sigla':'APS','horas':80,'requisito':'AS'},
     'Computação Gráfica':{'periodo':6,'sigla':'CG','horas':80,'requisito':'PIG, ALGLIN'}
-}
+    }
