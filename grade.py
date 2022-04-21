@@ -1,24 +1,30 @@
 from curriculo_materias import grade_curricular
 import pandas as pd
-
-#TO DO:Colocar cronograma de cada disciplina
-#TO DO:Identificar a semana do cronograma atrás do input do usuário
-
-class Grade:
-    def __init__(self,periodo):
-        self.periodo = periodo
-        global df 
-        df = pd.DataFrame.from_dict(grade_curricular, orient='index')
-
-    def mostrar_materias(self):#mostra todas as matérias do curriculo
-        print('\nCurrículo de matérias do curso: Tecnologia em Sistemas de Computação da Universidade Federal Fluminense(UFF) ')
-        print(df)
-    def materias_periodo(self,periodo):#mostra matérias do período selecionado
-        result_df = df.loc[df['periodo']== periodo]
-        print(f'\nMaterias do {periodo}° periodo:')
-        print(result_df)
+from tkinter import *
+from pandastable import *
 
 
-class Disciplina:
-    def __init__(self):
-        pass
+global df 
+
+colunas = ['Materia','Periodo','Sigla','Horas','Requisito']
+df = pd.DataFrame(grade_curricular).T.reset_index().rename(columns={'index':'Materia'})[colunas]
+
+
+class Display(Frame):
+    def __init__(self, parent=None):
+        self.parent = parent
+        Frame.__init__(self)
+        self.main = self.master
+        self.main.geometry('600x400+200+100')
+        self.main.title('Grade curricular de Tecnologia em Sistemas de Computação')
+        f = Frame(self.main)
+        f.pack(fill=BOTH,expand=1)
+        self.table = pt = Table(f, dataframe=df,
+                                showtoolbar=True, showstatusbar=True)
+        pt.show()
+        return
+
+app = Display()
+#launch the app
+app.mainloop()
+
