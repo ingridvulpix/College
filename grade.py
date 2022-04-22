@@ -27,10 +27,6 @@ class Display(Frame, Canvas):
         self.options = options
         self.menu()
 
-
-    def create_canvas(self):
-        pass
-
     def menu(self):
         label= Label(self.main, text= "O que deseja saber do curso?", font= ("", 10))
         label.pack(pady=30)
