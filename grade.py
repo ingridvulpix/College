@@ -38,6 +38,8 @@ class Display(Frame, Canvas):
         drop = OptionMenu(self.main, clicked, *self.options )
         drop.pack()
         #self.get_choice(clicked)
+        button = Button( self.main , text = "Gerar DataFrame" , command = self.generate_df ).pack()
+
     
     def get_choice(self, variable):
         choice = variable.get()
